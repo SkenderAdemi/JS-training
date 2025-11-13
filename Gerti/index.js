@@ -123,9 +123,6 @@ Krahaso: car.fuel === "electric".*/
 
 function checkCar (car)
 
-    const car1 = {brand: "tesla" , fuel: "electric"}
-    const car1 = {brand: "bmw" , fuel: "diesel"}
-
 {
     if (car.fuel === "electric")
     {
@@ -136,3 +133,10 @@ function checkCar (car)
         return "user fuel"
     }
 }
+
+const myCar = {brand: "Tesla", fuel: "electric"};
+const myCar2 = {brand:"bmw", fuel: "fuel"};
+
+console.log(checkCar(myCar));
+console.log(checkCar(myCar2));
+
