@@ -135,8 +135,7 @@ function checkCar (car)
 }
 
 const myCar = {brand: "Tesla", fuel: "electric"};
-const myCar2 = {brand:"bmw", fuel: "fuel"};
+const myCar2 = {brand:"bmw", fuel: "diesel"};
 
 console.log(checkCar(myCar));
 console.log(checkCar(myCar2));
-
