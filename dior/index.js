@@ -1,8 +1,13 @@
 //1
 
-user = {
+let user1 = {
     "name": "Dior",
     "role": "admin"
+}
+
+let user2 = {
+    "name": "Skender",
+    "role": "Not Admin"
 }
 
 function getUserAccess(user) {
@@ -13,13 +18,19 @@ function getUserAccess(user) {
     return `Hi ${user.name}, you are not an Admin`
 }
 
-console.log(getUserAccess(user))
+console.log(getUserAccess(user1))
+console.log(getUserAccess(user2))
 
 //2
 
-weather = {
+let weather1 = {
     "city": "Peja",
     "temp": 31
+}
+
+let weather2 = {
+    "city": "Prishtina",
+    "temp": 22
 }
 
 function checkWeather(weather) {
@@ -34,7 +45,8 @@ function checkWeather(weather) {
 
 }
 
-console.log(checkWeather(weather))
+console.log(checkWeather(weather1))
+console.log(checkWeather(weather2))
 
 //3
 
@@ -55,12 +67,20 @@ function getPrice(productName) {
 }
 
 getPrice("milk")
+getPrice("eggs")
+getPrice("bread")
+getPrice("yogurt")
 
 //4
 
-student = {
+let student1 = {
     "name": "Dior",
     "grade": 100
+}
+
+let student2 = {
+    "name": "Skender",
+    "grade": 78
 }
 
 function checkGrade(student) {
@@ -79,13 +99,19 @@ function checkGrade(student) {
     return `${student.name}, Fail`
 }
 
-console.log(checkGrade(student))
+console.log(checkGrade(student1))
+console.log(checkGrade(student2))
 
 //5
 
-car = {
+let car1 = {
     "brand": "Aston Martin",
     "fuel": true
+}
+
+let car2 = {
+    "brand": "Tesla",
+    "fuel": false
 }
 
 
@@ -96,4 +122,5 @@ function checkCar(car) {
     return `${car.brand} is Eco friendly`
 }
 
-console.log(checkCar(car))
+console.log(checkCar(car1))
+console.log(checkCar(car2))
