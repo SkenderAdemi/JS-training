@@ -54,7 +54,7 @@ function getPrice(productName) {
     }
 }
 
-console.log(getPrice("milk"))
+getPrice("milk")
 
 //4
 
