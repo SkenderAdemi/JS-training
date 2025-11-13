@@ -66,7 +66,7 @@ function getPrice(productName)
     switch (productName)
     {
         case "milk":
-            return 1; 
+            return 1;
         case "bread":
             return 2;
         case "eggs":
@@ -122,6 +122,10 @@ Krahaso: car.fuel === "electric".*/
 
 
 function checkCar (car)
+
+    const car1 = {brand: "tesla" , fuel: "electric"}
+    const car1 = {brand: "bmw" , fuel: "diesel"}
+
 {
     if (car.fuel === "electric")
     {
