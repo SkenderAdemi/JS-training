@@ -148,6 +148,7 @@ console.log(average)
 
 let userName = prompt("Enter Username: ")
 let password = prompt("Enter Password: ")
+let post = prompt("Add a post: ")
 
 const database = [
     { username: "arti", password: '1234' },
@@ -179,5 +180,15 @@ function loginUser() {
     return "Invalid Username or Password"
 }
 
+function postNews(user, post) {
+    if (checkUser(userName, password)) {
+        newsFeed.push({ username: user, timeline: post })
+    }
+}
+
 console.log(loginUser(userName, password))
+
+postNews(userName, post)
+
+console.log(newsFeed)
 
