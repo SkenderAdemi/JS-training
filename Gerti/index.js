@@ -20,6 +20,10 @@ Bonus:
             { username: "arta", timeline: "Coffee + coding = perfect day ☕️💻" },
             { username: "blerim", timeline: "Working on my first frontend project! 🚀" }
         ];
+
+
+        const userNamePrompt = prompt ("enter your username")
+        const passwordPrompt = prompt ("enter your password")
         
         function checkUser(username, password) {
             for (let i = 0; i < database.length; i++) {
@@ -48,7 +52,14 @@ Bonus:
         console.log(newsFeed);
 
 
-        
+        const friendsList = {
+        arti: ["arta", "blerim"],
+        arta: ["arti"],
+        blerim: ["arti", "arta"]
+        };
+
+
+
 
         
         
