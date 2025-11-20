@@ -127,7 +127,7 @@
 // console.log(checkCar(car1))
 // console.log(checkCar(car2))
 
-// 20 Nentor
+// 20 Nentor Exercise 1 
 
 let classroom = [
     { name: "Arta", grade: 9 },
@@ -143,3 +143,44 @@ for (i = 0; i < classroom.length; i++) {
 
 average = grade / 3
 console.log(average)
+
+// 20 Nentor Exercise 2
+
+let userName = prompt("Enter Username: ")
+let password = prompt("Enter Password: ")
+
+const database = [
+    { username: "arti", password: '1234' },
+    { username: "arta", password: "password" },
+    { username: "blerim", password: "qwerty" }
+];
+
+const newsFeed = [
+    { username: "arti", timeline: "Just learned JavaScript loops 😎" },
+    { username: "arta", timeline: "Coffee + coding = perfect day ☕️💻" },
+    { username: "blerim", timeline: "Working on my first frontend project! 🚀" }
+];
+
+function checkUser(user) {
+    for (i = 0; i < database.length; i++) {
+        if (user == database[i].username) {
+            return "User is Valid"
+        }
+    }
+
+    return "User is Invalid"
+}
+
+console.log(checkUser(userName))
+
+function loginUser(user, pass) {
+    for (i = 0; i < database.length; i++) {
+        if (user == database[i].username && pass == database[i].password) {
+            return newsFeed[i].timeline
+        }
+    }
+
+    return "Invalid Username or Password"
+}
+
+console.log(loginUser(userName, password))
