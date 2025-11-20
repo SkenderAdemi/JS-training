@@ -17,9 +17,9 @@ function getUserAccess(user)  {
   }
 }
 
+
 const user={name:'Jeta', role:'editor'};
 console.log(getUserAccess(user));
-
 
 
 /*Moti në qytet
@@ -38,6 +38,7 @@ Kontrollo temperaturën duke përdorur if, else if, else. */
 function checkWeather(weather) {
     const objWeather = {temperature: 20, city: 'Prishtina'}
 }
+
 
 let weather=20;
 if(weather>30) {
@@ -105,7 +106,7 @@ console.log(checkGrade(studentInfo))
 
 /*Kontrolli i makinës
 
-Detyra:
+Detyra 5:
 Krijo funksionin checkCar(car) që merr objekt me brand dhe fuel.
 Nëse makina është elektrike → printo “Eco friendly car”, ndryshe “Uses fuel”.
 
@@ -117,7 +118,7 @@ function checkCar(car){
     if (car.fuel==="electric") {
     console.log('Eco-friendly car')
 } else{
-    console.log('Uses fuel')
+    console.log('Uses fuel') // return
 }
 }
 
@@ -126,6 +127,8 @@ const car1={brand: 'Tesla', fuel:'electric'}
 const car2={brand:'BMW', fuel:'diesel'}
 
 console.log(checkCar(car1));
+
+
 
 
  
