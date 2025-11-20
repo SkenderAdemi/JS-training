@@ -161,26 +161,23 @@ const newsFeed = [
     { username: "blerim", timeline: "Working on my first frontend project! 🚀" }
 ];
 
-function checkUser(user) {
+function checkUser(user, pass) {
     for (i = 0; i < database.length; i++) {
-        if (user == database[i].username) {
-            return "User is Valid"
+        if (user == database[i].username && pass == database[i].password) {
+            return true
         }
     }
 
-    return "User is Invalid"
+    return false
 }
 
-console.log(checkUser(userName))
-
-function loginUser(user, pass) {
-    for (i = 0; i < database.length; i++) {
-        if (user == database[i].username && pass == database[i].password) {
-            return newsFeed[i].timeline
-        }
+function loginUser() {
+    if (checkUser(userName, password)) {
+        return newsFeed[i].timeline
     }
 
     return "Invalid Username or Password"
 }
 
 console.log(loginUser(userName, password))
+
