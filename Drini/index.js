@@ -104,3 +104,21 @@ function getPrice(productName) {
     fuel:'Electricity'
  }
  checkCar(car1)
+
+
+
+
+ //forlopp 
+
+ let classroom = [
+    {name:'Drin',grade: 9},
+    {name:'Edri',grade: 8},
+    {name:'Ols',grade: 10}
+    
+    
+]
+let rez = 0
+for(let i=0; i < classroom.length; i++){
+    rez = rez + classroom[i].grade / 3
+}
+console.log(rez)
