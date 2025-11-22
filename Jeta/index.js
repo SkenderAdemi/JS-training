@@ -1,132 +1,86 @@
-/*Funksion për rolin e përdoruesit
+let classroom = [
+  {name:'Arta', grade:9},
+  {name:'Luan', grade: 8 },
+  {name:'Elena', grade: 10}
 
-Detyra 1:
-Krijo funksionin getUserAccess(user) që pranon një objekt me name dhe role.
-Funksioni duhet të kthejë një tekst të ndryshëm varësisht rolit të përdoruesit.
+];
 
-Hint:
-Përdor if/else. Shembull:
-Nëse user.role === "admin" → kthe “Full access”. */
+let sum= 0 ;
 
-
-function getUserAccess(user)  {
-  if (user.role === "admin") {
-    return "Full access";
-  } else {
-    return "No access";
-  }
+for(let i = 0; i< classroom.length; i++){
+ sum = sum + classroom[i].grade;
 }
 
+let average=sum / 3
 
-const user={name:'Jeta', role:'editor'};
-console.log(getUserAccess(user));
-
-
-/*Moti në qytet
-
-Detyra 2:
-Krijo funksionin checkWeather(weather) që merr objekt me temperature dhe city, dhe kthen përshkrimin e motit.
-
-Rregullat:
-• 30 → nxehtë
-• 20–30 → ngrohtë
-• <20 → ftohtë
-
-Hint:
-Kontrollo temperaturën duke përdorur if, else if, else. */
-
-function checkWeather(weather) {
-    const objWeather = {temperature: 20, city: 'Prishtina'}
-}
+console.log(average)
 
 
-let weather=20;
-if(weather>30) {
-    console.log('Hot')
-} else if(weather<=30 && weather>=20) {
-    console.log('Warm')
-} else {
-    console.log('Cold')
-}
+// FB Page
 
-/* Llogaritja e çmimit me switch
 
-Detyra 3:
-Krijo funksionin getPrice(productName) që përdor switch për të kthyer çmimin e produkteve si: milk, bread, eggs.
+const database=[
+  {username:'Arti', password: '1234'},
+  {username:'Arta', password: 'password'},
+  {username:'Blerim', password: 'qwerty'}
+];
 
-Hint:
-Përdor strukturën switch (productName) { case "milk": ... }. */
+const newsFeed = [
+  { username: 'Arti', timeline:'Just learned JavaScript loops'},
+  {username: 'Arta', timeline:'Coffee + coding = perfect day!'},
+  {username:'Blerim', timeline: 'Working on my first frontend project!'},
 
-function getPrice(productName) {
-    switch(productName) {
-    case "milk":
-      return 1.5;
-    case "bread":
-      return 1.0;
-    case "eggs":
-      return 2.2;
-    default:
-      return "Product not found";
-  }
-}
-console.log(getPrice("bread"));
+];
 
-/* Notat e studentëve
+const username =prompt('Please type in your username');
+const password = prompt('Please type in your password');
 
-Detyra 4:
-Krijo funksionin checkGrade(student) që merr një objekt me name dhe grade, dhe kthen vlerësimin sipas pikëve.
+  function checkUser(username, password) {
+    for (let i=0 ;  i<database.length ; i++){
+      if(database[i].username===username && database[i].password===password){
+        return true
+      } 
 
-Hint:
-Përdor disa else if për të ndarë notat:
-(shkëlqyeshëm, shumë mirë, mirë, mjaftueshëm, dobët) */
-
-function checkGrade(student) {
-    if (student.grade===10) {
-    console.log(`Shkelqyeshem`)
-} else if (student.grade===9) {
-    console.log('Shume mire')
-} else if(student.grade===8) {
-    console.log('Mire')
-} else if(student.grade===7) {
-    console.log('Mjaftueshem')
-} else if(student.grade===6) {
-    console.log('Dobet')
-}
-
-    
-}
-const studentInfo={
-        name:"Jeta",
-        grade: 8,
     }
+    return false;
+  }
 
-console.log(checkGrade(studentInfo))
-
-
-
-/*Kontrolli i makinës
-
-Detyra 5:
-Krijo funksionin checkCar(car) që merr objekt me brand dhe fuel.
-Nëse makina është elektrike → printo “Eco friendly car”, ndryshe “Uses fuel”.
-
-Hint:
-Krahaso: car.fuel === "electric". */
-
-
-function checkCar(car){
-    if (car.fuel==="electric") {
-    console.log('Eco-friendly car')
-} else{
-    console.log('Uses fuel') // return
-}
+function signIn(username, password) {
+  if (checkUser(username, password)) {
+    console.log(newsFeed);
+    createPost(username); // post only after login
+    console.log("Updated NewsFeed:", newsFeed);
+  } else {
+    alert('Wrong username or password!');
+  }
 }
 
-const car1={brand: 'Tesla', fuel:'electric'}
+signIn(username, password);
 
-const car2={brand:'BMW', fuel:'diesel'}
+// BONUS
+function createPost(username) {
+  let newPost = prompt('Write your post:');
 
-console.log(checkCar(car1));
+  const newFeedObject = {
+    username: username,
+    timeline: newPost
+  };
+
+  newsFeed.push(newFeedObject);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
