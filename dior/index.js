@@ -131,17 +131,121 @@
 
 // 
 
-// 22 Nentor - Detyra me loops
+// // 22 Nentor - Detyra me loops
 
-//1 
+// //1 
 
-let numbers = [1, 2, 3, 4, 5]
+// let numbers = [1, 2, 3, 4, 5]
 
-for (i = 0; i < numbers.length; i++) {
-    console.log(numbers[i])
-}
+// for (i = 0; i < numbers.length; i++) {
+//     console.log(numbers[i])
+// }
 
-//2 
+// //2 
+
+// let names = ["dior", "skender", "drin"]
+
+// names.forEach(function (item, index) {
+//     console.log(`Index: ${index}, Emri: ${item}`)
+// })
+
+
+// //3
+
+// let fruits = [{ name: "Banana", price: 2 }, { name: "Apple", price: 4 }, { name: "Kiwi", price: 5 }]
+
+// fruits.forEach(function (item) {
+//     console.log(`${item.name} kushton ${item.price} Euro`)
+// })
+
+// //4
+
+// grades = [9, 8, 5, 10]
+
+// let sum = 0
+
+// for (i = 0; i < grades.length; i++) {
+//     sum += grades[i]
+// }
+
+// console.log(sum)
+
+// //5 
+
+// sentences = ["Programming is fun", "JS is fun"]
+
+// for (i = 0; i < sentences.length; i++) {
+//     if (sentences[i].length > 10) {
+//         console.log(sentences[i])
+//     }
+// }
+
+// // Detyrat me While
+
+// //1
+
+// let a = 1
+
+// while (a <= 10) {
+//     console.log(a)
+//     a++
+// }
+
+// //2 
+
+// let fruits2 = ["banana", "apple", "kiwi"]
+// let j = 0
+// while (j < fruits2.length) {
+//     console.log(fruits2[j])
+//     j++
+// }
+
+// //3
+
+// let numbers2 = [3, 7, 1, 4]
+// let sum2 = 0
+// k = 0
+
+// while (k < numbers2.length) {
+//     sum2 += numbers2[k]
+//     k++
+// }
+
+// console.log(sum2)
+
+// // Detyrat me do While
+
+// //1
+
+// let num3 = 1
+
+// do {
+//     console.log(num3)
+//     num3++
+// } while (num3 <= 5)
+
+// //2
+
+// let colors = ["red", "blue", "green"]
+
+// b = 0
+
+// do {
+//     console.log(colors[b])
+//     b++
+// } while (b < colors.length)
+
+// Detyrat me forEach Loops
+
+//1
+
+numbers = [1, 2, 3, 4, 5]
+
+numbers.forEach(function (item) {
+    console.log(item)
+})
+
+//2
 
 let names = ["dior", "skender", "drin"]
 
@@ -149,90 +253,36 @@ names.forEach(function (item, index) {
     console.log(`Index: ${index}, Emri: ${item}`)
 })
 
-
 //3
 
-let fruits = [{ name: "Banana", price: 2 }, { name: "Apple", price: 4 }, { name: "Kiwi", price: 5 }]
+let objects = [{ name: "Laptop", price: 1000 }, { name: "TV", price: 500 }, { name: "Phone", price: 450 }]
 
-fruits.forEach(function (item) {
+objects.forEach(function (item) {
     console.log(`${item.name} kushton ${item.price} Euro`)
 })
 
 //4
 
-grades = [9, 8, 5, 10]
+let grades = [9, 8, 5, 10]
 
-let sum = 0
+let result = 0
 
-for (i = 0; i < grades.length; i++) {
-    sum += grades[i]
-}
+grades.forEach(function (item) {
+    result += item
+})
 
-console.log(sum)
+console.log(result)
 
 //5 
 
-sentences = ["Programming is fun", "JS is fun"]
+let words = ["programming", "word", "fly", "kiwi", "computer"]
 
-for (i = 0; i < sentences.length; i++) {
-    if (sentences[i].length > 10) {
-        console.log(sentences[i])
+count = 0
+
+words.forEach(function (item) {
+    if (item.length > 4) {
+        count++
     }
-}
+})
 
-// Detyrat me While
-
-//1
-
-let a = 1
-
-while (a <= 10) {
-    console.log(a)
-    a++
-}
-
-//2 
-
-let fruits2 = ["banana", "apple", "kiwi"]
-let j = 0
-while (j < fruits2.length) {
-    console.log(fruits2[j])
-    j++
-}
-
-//3
-
-let numbers2 = [3, 7, 1, 4]
-let sum2 = 0
-k = 0
-
-while (k < numbers2.length) {
-    sum2 += numbers2[k]
-    k++
-}
-
-console.log(sum2)
-
-// Detyrat me do While
-
-//1
-
-let num3 = 1
-
-do {
-    console.log(num3)
-    num3++
-} while (num3 <= 5)
-
-//2
-
-let colors = ["red", "blue", "green"]
-
-b = 0
-
-do {
-    console.log(colors[b])
-    b++
-} while (b < colors.length)
-
-
+console.log(count)
