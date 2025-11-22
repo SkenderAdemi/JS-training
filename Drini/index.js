@@ -167,3 +167,15 @@ const passwordPrompt = prompt("Enter your password");
 
 signIn(userNamePrompt, passwordPrompt);
 
+//posti 
+
+const newPost = {
+  username: "arti", 
+  timeline: "Learning JavaScript is fun! 😎" 
+};
+
+
+newsFeed.push(newPost);
+
+
+console.log(newsFeed);
