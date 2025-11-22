@@ -129,66 +129,110 @@
 
 // 20 Nentor Exercise 1 
 
-let classroom = [
-    { name: "Arta", grade: 9 },
-    { name: "Luan", grade: 8 },
-    { name: "Elena", grade: 10 }
-];
+// 
 
-let grade = 0
+// 22 Nentor - Detyra me loops
 
-for (i = 0; i < classroom.length; i++) {
-    grade += classroom[i].grade
+//1 
+
+let numbers = [1, 2, 3, 4, 5]
+
+for (i = 0; i < numbers.length; i++) {
+    console.log(numbers[i])
 }
 
-average = grade / 3
-console.log(average)
+//2 
 
-// 20 Nentor Exercise 2
+let names = ["dior", "skender", "drin"]
 
-let userName = prompt("Enter Username: ")
-let password = prompt("Enter Password: ")
-let post = prompt("Add a post: ")
+names.forEach(function (item, index) {
+    console.log(`Index: ${index}, Emri: ${item}`)
+})
 
-const database = [
-    { username: "arti", password: '1234' },
-    { username: "arta", password: "password" },
-    { username: "blerim", password: "qwerty" }
-];
 
-const newsFeed = [
-    { username: "arti", timeline: "Just learned JavaScript loops 😎" },
-    { username: "arta", timeline: "Coffee + coding = perfect day ☕️💻" },
-    { username: "blerim", timeline: "Working on my first frontend project! 🚀" }
-];
+//3
 
-function checkUser(user, pass) {
-    for (i = 0; i < database.length; i++) {
-        if (user == database[i].username && pass == database[i].password) {
-            return true
-        }
-    }
+let fruits = [{ name: "Banana", price: 2 }, { name: "Apple", price: 4 }, { name: "Kiwi", price: 5 }]
 
-    return false
+fruits.forEach(function (item) {
+    console.log(`${item.name} kushton ${item.price} Euro`)
+})
+
+//4
+
+grades = [9, 8, 5, 10]
+
+let sum = 0
+
+for (i = 0; i < grades.length; i++) {
+    sum += grades[i]
 }
 
-function loginUser() {
-    if (checkUser(userName, password)) {
-        return newsFeed[i].timeline
-    }
+console.log(sum)
 
-    return "Invalid Username or Password"
-}
+//5 
 
-function postNews(user, post) {
-    if (checkUser(userName, password)) {
-        newsFeed.push({ username: user, timeline: post })
+sentences = ["Programming is fun", "JS is fun"]
+
+for (i = 0; i < sentences.length; i++) {
+    if (sentences[i].length > 10) {
+        console.log(sentences[i])
     }
 }
 
-console.log(loginUser(userName, password))
+// Detyrat me While
 
-postNews(userName, post)
+//1
 
-console.log(newsFeed)
+let a = 1
+
+while (a <= 10) {
+    console.log(a)
+    a++
+}
+
+//2 
+
+let fruits2 = ["banana", "apple", "kiwi"]
+let j = 0
+while (j < fruits2.length) {
+    console.log(fruits2[j])
+    j++
+}
+
+//3
+
+let numbers2 = [3, 7, 1, 4]
+let sum2 = 0
+k = 0
+
+while (k < numbers2.length) {
+    sum2 += numbers2[k]
+    k++
+}
+
+console.log(sum2)
+
+// Detyrat me do While
+
+//1
+
+let num3 = 1
+
+do {
+    console.log(num3)
+    num3++
+} while (num3 <= 5)
+
+//2
+
+let colors = ["red", "blue", "green"]
+
+b = 0
+
+do {
+    console.log(colors[b])
+    b++
+} while (b < colors.length)
+
 
