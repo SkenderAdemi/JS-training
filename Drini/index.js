@@ -122,3 +122,48 @@ for(let i=0; i < classroom.length; i++){
     rez = rez + classroom[i].grade / 3
 }
 console.log(rez)
+
+
+//detyra fb ap
+
+
+const database = [
+  { username: "arti", password: "1234" },
+  { username: "arta", password: "password" },
+  { username: "blerim", password: "qwerty" }
+];
+
+const newsFeed = [
+  { username: "arti", timeline: "Just learned JavaScript loops 😎" },
+  { username: "arta", timeline: "Coffee + coding = perfect day ☕️💻" },
+  { username: "blerim", timeline: "Working on my first frontend project! 🚀" }
+];
+
+
+function isUserValid(username, password) {
+
+  for (let i = 0;i < database.length; i++) {
+
+    if (database[i].username === username &&
+        database[i].password === password) {
+
+      console.log("U are in database");
+      console.log("Here is your newsfeed");
+      console.log(newsFeed);
+      return; 
+    }
+  }
+
+  
+  console.log("U are not in database");
+}
+
+function signIn(username, password) {
+  isUserValid(username, password);
+}
+
+const userNamePrompt = prompt("Enter your usename");
+const passwordPrompt = prompt("Enter your password");
+
+signIn(userNamePrompt, passwordPrompt);
+
