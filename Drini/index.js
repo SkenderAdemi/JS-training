@@ -122,3 +122,170 @@ for(let i=0; i < classroom.length; i++){
     rez = rez + classroom[i].grade / 3
 }
 console.log(rez)
+//app
+const database = [
+  { username: "arti", password: "1234" },
+  { username: "arta", password: "password" },
+  { username: "blerim", password: "qwerty" }
+];
+
+const newsFeed = [
+  { username: "arti", timeline: "Just learned JavaScript loops 😎" },
+  { username: "arta", timeline: "Coffee + coding = perfect day ☕️💻" },
+  { username: "blerim", timeline: "Working on my first frontend project! 🚀" }
+];
+
+
+function isUserValid(username, password) {
+
+  for (let i = 0;i < database.length; i++) {
+
+    if (database[i].username === username &&
+        database[i].password === password) {
+
+      console.log("U are in database");
+      console.log("Here is your newsfeed");
+      console.log(newsFeed);
+      return; 
+    }
+  }
+
+
+  console.log("U are not in database");
+}
+
+function signIn(username, password) {
+  isUserValid(username, password);
+}
+
+const userNamePrompt = prompt("Enter your usename");
+const passwordPrompt = prompt("Enter your password");
+
+signIn(userNamePrompt, passwordPrompt);
+
+//posti 
+
+const newPost = {
+  username: "arti", 
+  timeline: "Learning JavaScript is fun! 😎" 
+};
+
+
+newsFeed.push(newPost);
+
+
+console.log(newsFeed);
+
+
+
+
+
+
+//detyra me loop 
+
+//1
+
+const numrat = [1,2,3,4,5]
+for(let i = 0; i<=5 ; i++){
+    console.log(numrat[i])
+}
+
+//2
+const emrat = ['Drin','Edri','Leon']
+for(let i = 0;i < emrat.length; i++){
+    console.log(emrat[i])
+}
+//3
+const frutat = [
+    { name: "Banane", price: 2 }
+]
+for(let i = 0;i < frutat.lenght;i++){
+    console.log(frutat[i].name,'kushton', frutat[i].price)
+}
+
+//4
+const notat = [9,8,5,10]
+for(let i = 0; i < notat.length;i++){
+    console.log(notat[0]+notat[1]+notat[2]+notat[3])
+}
+//5
+const fjali = ['Si je ','Qa bane qysh kalove aje si je']
+for(let i = 0;i < fjali.lenght;i++){
+    if(fjali.length > 10){
+        console.log(fjali[i])
+    }
+    
+}
+
+//while
+//1
+let i = 1
+while(i<11){
+    console.log(i)
+    i++
+}
+//2
+let a = 0
+const frutat1 = ['banane','molla','portokalli']
+while(a < frutat1.length){
+    console.log(frutat1[a])
+    a++
+}
+//3
+let u = 0
+const shuma = [3,7,1,4]
+while(u < shuma.length){
+    console.log(shuma[0]+shuma[1]+shuma[2]+shuma[3])
+    u++
+}
+//do while
+//1
+let nr = 1
+do{
+    console.log(nr)
+    nr++
+}while(nr<6)
+   //2
+   let o = 0
+   const ngjyrat = ['kaltert', 'zez','kuqe']
+   do{
+    console.log(ngjyrat[o])
+    o++
+   }while(o < ngjyrat.length)
+
+
+//detyra for each
+
+const lista = [1,2,3,4,5]
+lista.forEach(function(lista){
+    console.log(lista)
+    return
+})
+//2
+const names = ['Drin','Edri']
+names.forEach(function(names,index){
+    
+    console.log(index,names)
+    return
+})
+//3
+const obj =[ { name: "Laptop", price: 1000 }]
+obj.forEach(function(obj){
+    console.log(obj.name,'kushton',obj.price)
+    return
+})
+//4
+const grades = [9,8,5,10]
+
+grades.forEach(function(grades){
+    console.log(grades[0]+grades[1]+grades[2]+grades[3]+grades[4] / 5)
+    return
+})
+//5
+const fjalet = ['hey','nice','letsgo']
+fjalet.forEach(function(fjala){
+    if(fjala.length > 4){
+        console.log(fjala)
+    }
+    return
+})
