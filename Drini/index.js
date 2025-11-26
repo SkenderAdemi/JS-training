@@ -124,8 +124,12 @@ for(let i=0; i < classroom.length; i++){
 console.log(rez)
 
 
+
 //detyra fb ap
 
+
+
+//app
 
 const database = [
   { username: "arti", password: "1234" },
@@ -154,7 +158,9 @@ function isUserValid(username, password) {
     }
   }
 
-  
+
+
+
   console.log("U are not in database");
 }
 
@@ -179,3 +185,153 @@ newsFeed.push(newPost);
 
 
 console.log(newsFeed);
+
+
+
+
+
+
+
+//detyra me loop 
+
+//1
+
+const numrat = [1,2,3,4,5]
+for(let i = 0; i<=5 ; i++){
+    console.log(numrat[i])
+}
+
+//2
+const emrat = ['Drin','Edri','Leon']
+for(let i = 0;i < emrat.length; i++){
+    console.log(emrat[i])
+}
+//3
+const frutat = [
+    { name: "Banane", price: 2 }
+]
+for(let i = 0;i < frutat.lenght;i++){
+    console.log(frutat[i].name,'kushton', frutat[i].price)
+}
+
+//4
+const notat = [9,8,5,10]
+for(let i = 0; i < notat.length;i++){
+    console.log(notat[0]+notat[1]+notat[2]+notat[3])
+}
+//5
+const fjali = ['Si je ','Qa bane qysh kalove aje si je']
+for(let i = 0;i < fjali.lenght;i++){
+    if(fjali.length > 10){
+        console.log(fjali[i])
+    }
+    
+}
+
+//while
+//1
+let i = 1
+while(i<11){
+    console.log(i)
+    i++
+}
+//2
+let a = 0
+const frutat1 = ['banane','molla','portokalli']
+while(a < frutat1.length){
+    console.log(frutat1[a])
+    a++
+}
+//3
+let u = 0
+const shuma = [3,7,1,4]
+while(u < shuma.length){
+    console.log(shuma[0]+shuma[1]+shuma[2]+shuma[3])
+    u++
+}
+//do while
+//1
+let nr = 1
+do{
+    console.log(nr)
+    nr++
+}while(nr<6)
+   //2
+   let o = 0
+   const ngjyrat = ['kaltert', 'zez','kuqe']
+   do{
+    console.log(ngjyrat[o])
+    o++
+   }while(o < ngjyrat.length)
+
+
+//detyra for each
+
+const lista = [1,2,3,4,5]
+lista.forEach(function(lista){
+    console.log(lista)
+    return
+})
+//2
+const names = ['Drin','Edri']
+names.forEach(function(names,index){
+    
+    console.log(index,names)
+    return
+})
+//3
+const obj =[ { name: "Laptop", price: 1000 }]
+obj.forEach(function(obj){
+    console.log(obj.name,'kushton',obj.price)
+    return
+})
+//4
+const grades = [9,8,5,10]
+
+grades.forEach(function(grades){
+    console.log(grades[0]+grades[1]+grades[2]+grades[3]+grades[4] / 5)
+    return
+})
+//5
+const fjalet = ['hey','nice','letsgo']
+fjalet.forEach(function(fjala){
+    if(fjala.length > 4){
+        console.log(fjala)
+    }
+    return
+})
+
+//kalkulatori
+const calculator = (x, y, operator, author) => {
+    let result;
+    switch(operator) {
+        case '+':
+            result = x + y;
+            break;
+            case '-':
+            result = x - y;
+            break;
+            case '/':
+            result = x / y;
+            break;
+            case '*':
+            result = x * y;
+            break;
+            
+    }
+    console.log(`This function is created by ${author}
+            and the result is ${result}`)
+}
+const calculations = [
+    {x: 10, y: 5, operator: '+', author: 'Arti'},
+    {x: 10, y: 5, operator: '-', author: 'Drini'},
+    {x: 10, y: 5, operator: '*', author: 'Jeta'},
+    {x: 10, y: 5, operator: '/', author: 'Arta'},
+]
+
+const results = []
+for( const item of calculations){
+    const rezi = calculator(item.x,item.y,item.operator,item.author)
+    results.push(rezi)
+}
+calculator(2,3,'+','Drin')
