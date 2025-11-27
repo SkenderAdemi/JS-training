@@ -56,7 +56,6 @@ for(i = 0; i < users.length; i++) {
     }
 }
 
-console.log(users)
 
 
 let foods = ["apple", "pizza", "banana", "burger"];
@@ -81,7 +80,6 @@ for (let i = 0; i < numbers.length; i++) {
     result = result + numbers[i]
 }
 
-console.log(result)
 
 
 
@@ -116,6 +114,93 @@ function createPost(username) {
 
     newsFeed.push(newfeed);
 }
+
+
+
+// Loops 
+
+// 1) While Loop -> perseritet derisa kushti te jete true
+
+let a = 1;
+
+while (a < 5) {
+    // console.log('while loop',a)
+    a++
+}
+
+let password = '';
+
+// while(password !== '1234') {
+//     password = prompt("Shkruaje passwordin")
+// }
+
+
+
+// 2) - Do... while ->
+//  e ekzekuton kodin te pakten njehere, pastaj 
+//  e kontrollon kushtin
+
+
+let count = 10;
+
+do {
+    // console.log('Inside!')
+} while (count < 5)
+
+
+let again; 
+
+do {
+    // again = prompt('Do you want to continue (yes/no)');
+} while(again === 'yes')
+
+
+// forEach - metode e arrayit qe e ekzekuton nje funksion per secilin
+// element te listes/arrayit
+
+// Argumentet: 
+// 1) item -> vlera e elementit
+// 2) index -> pozita e elementit
+// 3) array -> vet lista
+
+const students_ = ['Drini', 'Jeta', 'Leoni'];
+
+// for loop
+for(let i = 0; i<students_.length; i++) {
+    console.log('for loop',students_[i])
+}
+
+// forEach
+students_.forEach(function(student) {
+    console.log('for each', student)
+})
+
+
+
+
+
+// students_.forEach(function(student, index, array) {
+//     console.log('studenti:', student)
+
+//     const next = array[index + 1];
+
+//     if(next) {
+//         console.log('pas tij', array[index + 1])
+//     }
+// })
+
+
+// const products = [
+//     {name: 'laptop', price: 1000},
+//     {name: 'tv', price: 500}
+// ]
+
+// products.forEach(function(product) {
+//     console.log(product.name, product.price)
+// }
+// )
+
+
 
 
 
