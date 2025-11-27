@@ -235,54 +235,153 @@
 //     b++
 // } while (b < colors.length)
 
-// Detyrat me forEach Loops
+// // Detyrat me forEach Loops
 
-//1
+// //1
 
-numbers = [1, 2, 3, 4, 5]
+// numbers = [1, 2, 3, 4, 5]
 
-numbers.forEach(function (item) {
-    console.log(item)
-})
+// numbers.forEach(function (item) {
+//     console.log(item)
+// })
 
-//2
+// //2
 
-let names = ["dior", "skender", "drin"]
+// let names = ["dior", "skender", "drin"]
 
-names.forEach(function (item, index) {
-    console.log(`Index: ${index}, Emri: ${item}`)
-})
+// names.forEach(function (item, index) {
+//     console.log(`Index: ${index}, Emri: ${item}`)
+// })
 
-//3
+// //3
 
-let objects = [{ name: "Laptop", price: 1000 }, { name: "TV", price: 500 }, { name: "Phone", price: 450 }]
+// let objects = [{ name: "Laptop", price: 1000 }, { name: "TV", price: 500 }, { name: "Phone", price: 450 }]
 
-objects.forEach(function (item) {
-    console.log(`${item.name} kushton ${item.price} Euro`)
-})
+// objects.forEach(function (item) {
+//     console.log(`${item.name} kushton ${item.price} Euro`)
+// })
 
-//4
+// //4
 
-let grades = [9, 8, 5, 10]
+// let grades = [9, 8, 5, 10]
 
-let result = 0
+// let result = 0
 
-grades.forEach(function (item) {
-    result += item
-})
+// grades.forEach(function (item) {
+//     result += item
+// })
+
+// console.log(result)
+
+// //5 
+
+// let words = ["programming", "word", "fly", "kiwi", "computer"]
+
+// count = 0
+
+// words.forEach(function (item) {
+//     if (item.length > 4) {
+//         count++
+//     }
+// })
+
+// console.log(count)
+
+
+// // FB APP
+
+
+// let userName = prompt("Enter Username: ")
+// let password = prompt("Enter Password: ")
+// let post = prompt("Add a post: ")
+
+// const database = [
+//     { username: "arti", password: '1234' },
+//     { username: "arta", password: "password" },
+//     { username: "blerim", password: "qwerty" }
+// ];
+
+// const newsFeed = [
+//     { username: "arti", timeline: "Just learned JavaScript loops :sunglasses:" },
+//     { username: "arta", timeline: "Coffee + coding = perfect day :coffee:️:computer:" },
+//     { username: "blerim", timeline: "Working on my first frontend project! :rocket:" }
+// ];
+
+// const checkUser = (user, pass) => {
+//     for (i = 0; i < database.length; i++) {
+//         if (user == database[i].username && pass == database[i].password) {
+//             return true
+//         }
+//     }
+
+//     return false
+// }
+
+// const loginUser = () => {
+//     if (checkUser(userName, password)) {
+//         return newsFeed[i].timeline
+//     }
+
+//     return "Invalid Username or Password"
+// }
+
+// const postNews = (user, post) => {
+//     if (checkUser(userName, password)) {
+//         newsFeed.push({ username: user, timeline: post })
+//     }
+// }
+
+// console.log(loginUser(userName, password))
+
+// postNews(userName, post)
+
+// console.log(newsFeed)
+
+
+const calculator = ({ x, y, operator, author }) => {
+
+    let result;
+
+    console.log(x, y, operator)
+
+    switch (operator) {
+        case "*":
+            result = x * y
+            break;
+        case "+":
+            result = x + y
+            break;
+        case "-":
+            result = x - y
+            break;
+        case "/":
+            result = x / y
+            break;
+        default:
+            console.log("Not a valid operator")
+
+    }
+    console.log(`This function is created by ${author} and the result is ${result}`)
+
+    return result;
+}
+
+const calculations = [
+    { x: 10, y: 5, operator: '+', author: 'Arti' },
+    { x: 10, y: 5, operator: '-', author: 'Drini' },
+    { x: 10, y: 5, operator: '*', author: 'Jeta' },
+    { x: 10, y: 5, operator: '/', author: 'Arta' },
+]
+
+
+let result = [];
+
+for (let calculation of calculations) {
+    let sum = calculator(calculation);
+    result.push(sum)
+
+}
 
 console.log(result)
 
-//5 
 
-let words = ["programming", "word", "fly", "kiwi", "computer"]
-
-count = 0
-
-words.forEach(function (item) {
-    if (item.length > 4) {
-        count++
-    }
-})
-
-console.log(count)
