@@ -123,7 +123,7 @@ showProperties(animal)
 
 //9 showStarts(rows)
 
-function showStarts(rows) {
+function showStars(rows) {
 
     let stars = "*"
 
@@ -135,4 +135,4 @@ function showStarts(rows) {
 
 }
 
-showStarts(5)
+showStars(5)
