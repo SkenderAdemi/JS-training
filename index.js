@@ -13,7 +13,7 @@ const calculator =(x,y,operator,createdBy)=> {
        case"/":
        result=x/y;
        default:
-        result = "Operator i pavlefshëm";
+        result = "Operator i vlefshem";
  }
 
 console.log(`This function is createdBy ${createdBy} and the result is ${result}` )
