@@ -125,11 +125,57 @@ console.log(rez)
 
 
 
+
 //detyra fb ap
 
 
 
 //app
+
+//app
+// const database = [
+//   { username: "arti", password: "1234" },
+//   { username: "arta", password: "password" },
+//   { username: "blerim", password: "qwerty" }
+// ];
+
+// const newsFeed = [
+//   { username: "arti", timeline: "Just learned JavaScript loops 😎" },
+//   { username: "arta", timeline: "Coffee + coding = perfect day ☕️💻" },
+//   { username: "blerim", timeline: "Working on my first frontend project! 🚀" }
+// ];
+
+
+// function isUserValid(username, password) {
+
+//   for (let i = 0;i < database.length; i++) {
+
+//     if (database[i].username === username &&
+//         database[i].password === password) {
+
+//       console.log("U are in database");
+//       console.log("Here is your newsfeed");
+//       console.log(newsFeed);
+//       return; 
+//     }
+//   }
+
+
+//   console.log("U are not in database");
+// }
+
+// function signIn(username, password) {
+//   isUserValid(username, password);
+// }
+
+// const userNamePrompt = prompt("Enter your usename");
+// const passwordPrompt = prompt("Enter your password");
+
+// signIn(userNamePrompt, passwordPrompt);
+
+
+//e permirsuar
+
 
 const database = [
   { username: "arti", password: "1234" },
@@ -144,7 +190,7 @@ const newsFeed = [
 ];
 
 
-function isUserValid(username, password) {
+const isUserValid = (username, password) => {
 
   for (let i = 0;i < database.length; i++) {
 
@@ -160,11 +206,10 @@ function isUserValid(username, password) {
 
 
 
-
   console.log("U are not in database");
 }
 
-function signIn(username, password) {
+const  signIn = (username, password) => {
   isUserValid(username, password);
 }
 
@@ -185,7 +230,6 @@ newsFeed.push(newPost);
 
 
 console.log(newsFeed);
-
 
 
 
@@ -216,13 +260,15 @@ for(let i = 0;i < frutat.lenght;i++){
 
 //4
 const notat = [9,8,5,10]
+let sum = 0
 for(let i = 0; i < notat.length;i++){
-    console.log(notat[0]+notat[1]+notat[2]+notat[3])
+    sum = sum + notat[i]
 }
+console.log(sum)
 //5
 const fjali = ['Si je ','Qa bane qysh kalove aje si je']
 for(let i = 0;i < fjali.lenght;i++){
-    if(fjali.length > 10){
+    if(fjali[i].length > 10){
         console.log(fjali[i])
     }
     
@@ -244,9 +290,11 @@ while(a < frutat1.length){
 }
 //3
 let u = 0
+let b = 0
 const shuma = [3,7,1,4]
 while(u < shuma.length){
-    console.log(shuma[0]+shuma[1]+shuma[2]+shuma[3])
+    b = b + shuma[u]
+   
     u++
 }
 //do while
@@ -287,19 +335,21 @@ obj.forEach(function(obj){
 })
 //4
 const grades = [9,8,5,10]
-
-grades.forEach(function(grades){
-    console.log(grades[0]+grades[1]+grades[2]+grades[3]+grades[4] / 5)
+let sum1 = 0
+grades.forEach(function(grade){
+    sum += grade
     return
 })
+console.log(`Mesatarja eshte ${sum1 / grades.length}`)
 //5
-const fjalet = ['hey','nice','letsgo']
+const fjalet = ['hey','nice','lets go']
 fjalet.forEach(function(fjala){
     if(fjala.length > 4){
         console.log(fjala)
     }
-    return
+    //return
 })
+
 
 //kalkulatori
 const calculator = (x, y, operator, author) => {
@@ -321,6 +371,7 @@ const calculator = (x, y, operator, author) => {
     }
     console.log(`This function is created by ${author}
             and the result is ${result}`)
+
 }
 const calculations = [
     {x: 10, y: 5, operator: '+', author: 'Arti'},
@@ -335,3 +386,9 @@ for( const item of calculations){
     results.push(rezi)
 }
 calculator(2,3,'+','Drin')
+
+
+
+
+
+
