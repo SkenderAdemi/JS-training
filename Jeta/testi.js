@@ -2,17 +2,7 @@
 
 // 1. returnOnlyOddPeople(people)
 
-returnOnlyOddPeople = (people) => {
-  let result = [];
 
-  for (let i = 0; i < people.length; i++) {
-    if (people[i].id % 2 !== 0) {
-      result.push(people[i]);
-    }
-  }
-
-  return result;
-}
 
 const people = [
   { id: 1, name: "Arta" },
@@ -20,6 +10,13 @@ const people = [
   { id: 3, name: "Doni" },
   { id: 4, name: "Elira" }
 ];
+
+let result=[];
+for(let person of people) {
+  if(person.id % 2 ==! 0) {
+    result.push (person);
+  }
+}
 
 returnOnlyOddPeople(people);
 
@@ -46,7 +43,7 @@ console.log(maxNr(7,17));
 
 //3. isLandscape(width, height)
 
-isLandscape =  (width, height) => width > height;
+const isLandscape =  (width, height) => width > height;
 
 console.log(isLandscape(1230,1880));
 
@@ -57,20 +54,25 @@ console.log(isLandscape(1230,1880));
 //4. fizzBuzz(input)
 
 
-const fizzBuzz = (c) => {
-    if (c % 3 === 0) {
-        return 'Fizz';
-    }
-    if (c % 5 === 0) {
-        return 'Buzz';
-    }
-    if (c % 3 === 0 && c % 5 === 0) {
-        return 'FizzBuzz';
-    }
+const fizzBuzz = (c) => function fizzBuzz(c) {
     if (typeof c !== 'number') {
         return NaN;
     }
+
+    if (c % 3 === 0 && c % 5 === 0) {
+        return 'FizzBuzz';
+    }
+
+    if (c % 3 === 0) {
+        return 'Fizz';
+    }
+
+    if (c % 5 === 0) {
+        return 'Buzz';
+    }
+
 }
+  
 
 console.log(fizzBuzz(5));
 
@@ -79,6 +81,23 @@ console.log(fizzBuzz(5));
 
 
 // 5. checkSpeed(speed)
+
+checkSpeed = (speed) => {
+  const speedLimit = 70; // limiti i lejuar
+  const kmPerPoint = 5; // per cdo 5km/h --> 1 pike
+
+  if (speed <= speedLimit) {
+    console.log('Ok');
+    return;
+  }
+
+  const points = Math.floor( speed - speedLimit) / kmPerPoint;
+  console.log(points)
+
+  if(points >= 12) {
+    console.log('License Suspended')
+  }
+}
 
 
 
@@ -145,3 +164,19 @@ const showProperties = (obj) => {
 
 };
 showProperties(student);
+
+
+
+// 9. showStars(rows)
+
+
+showStars = (rows) => {
+  let stars = "";
+   
+  for (let i = 0; i< rows; i++) {
+    stars = stars + '*'
+    console.log[stars] // e thirrim mrena for loop-it qe me shku nqdo rresht, rreshti 1 - 1 yll ...
+  }
+}
+
+showStars(5);
