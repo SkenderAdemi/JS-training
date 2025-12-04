@@ -1,3 +1,31 @@
- .highlight {
- background-color: blueviolet !important;
+.box {
+   width:250px;
+   height:250px;
+   background-color: white;
+   border: 2px solid black;
+
+
 }
+
+
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+ 
+}
+
+#blue {
+  background-color: blue;
+}
+
+#red {
+  background-color: red;
+}
+
+#green {
+  background-color: green;
+}
+
+

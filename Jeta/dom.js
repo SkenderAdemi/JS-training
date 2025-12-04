@@ -1,115 +1,141 @@
-//1) What is DOM?
+const box = document.querySelector('.box')
 
-    // Document Object Model 
-    // --> HTML --> Head && Body --> 
+const blueColor = document.querySelector('#blue')
+const redColor = document.querySelector('#red')
+const greenColor = document.querySelector('#green')
 
-
-//2) Why DOM is useful?
-   
-  // reads html elements
-  // changes elements
-  // adds new elements
-  // removes
-  // react to user input 
+const button = document.querySelector('button')
 
 
 
-// 3) Selecting elements:
-
-// a) 
-const mainTitle = document.getElementById("main");;
-
-console.log(mainTitle)
-
-// b)
-const elements = document.getElementsByClassName('text-style')
-
-console.log(elements)
-
-// c)
-const tagH1 = document.getElementsByTagName('h1')
-
-console.log(tagH1)
-
-// d) querySelector()
-// finds the first element that  matches a CSS selector
-
-const classQuery = document.querySelector('.text-style')
-console.log(classQuery.innerHTML)
-
-const idQuery = document.querySelector('#main')
-console.log(idQuery.innerHTML)
-
-const divQuery = document.querySelector('div > p')
-console.log(divQuery.innerHTML)
-
-// e) querySelectorAll() 
-// finds all elements that match a CSS selector
-
-const divQueryAll = document.querySelectorAll('div')
-
-divQueryAll.forEach(items => {console.log(items)});
+blueColor.addEventListener('click', () => {
+  box.style.backgroundColor = 'blue'
+})
 
 
 
-// 4) Manipulating elements
-
-// 1) Change Text
-
-const mainTxt = document.querySelector('#main')
-mainTxt.textContent = 'Nothing'
-
-// 2) Change HTML inside
-mainTxt.innerHTML = "<em>Nothing</em>"
-
-// 3) Modify elements style
-
-mainTxt.style.fontSize = '60px';
-
-// 4) Add / Remove / Toggle Classes
-mainTxt.classList.add('dark-mode')
-mainTxt.classList.remove('dark-mode')
-mainTxt.classList.toggle('dark-mode')
+redColor.addEventListener('click', () => {
+  box.style.backgroundColor = 'red'
+})
 
 
 
+greenColor.addEventListener('click', () => {
+  box.style.backgroundColor = 'green'
+})
 
-// Manipulating Elements
-// a) Ndrysho tekstin e h1 duke perdor textContent
-// b) Vendos brenda tij nje HTML te ri  (innerHTML)
-// c) Ndrysho stilin e elementit h1 duke bere: 
-   // - text me ngjyre te kuqe, - fontsize me te madhe,
-   // - background te zi
-// d) perdor classList.add() per ti shtuar nje klase
-// e) perdor classList.toggle() per te aktivizuar/deaktivizuar nje klase
+
+
+button.addEventListener('click', () => {
+  box.style.backgroundColor = 'unset'
+})
 
 
 
 
 
-// a)
-
-const header = document.getElementById("main");
-header.textContent = "New Main Title";
-
-
-// b) 
-
-header.innerHTML = "<em>Main Title Updated with HTML</em>"
-
-// c) 
-header.style.color = "red";     
-header.style.fontSize = "40px";    
-header.style.backgroundColor = "yellow"; 
+const input = document.querySelector('.inputTask')
+const addBtn = document.querySelector('.add-btn')
+const todoList = document.querySelector('.todo-list')
 
 
-// d) 
-header.classList.add("highlight");
+addBtn.addEventListener('click', () =>{
+  const text = input.value.trim()
+
+  if (text === ''){
+    return
+  }
 
 
-// e) 
- header.classList.toggle('highlight');
-  header.classList.toggle('highlight');
+  const li = document.createElement('li')
+  li.textContent = text
+
+   li.addEventListener('click', () => {
+    li.remove()
+  })
+
+  
+  todoList.appendChild(li)
+  input.value = ''
+})
+
+
+
+
+const textBox = document.querySelector('#textBox') ;
+const count1 = document.querySelector('#count');
+
+textBox.addEventListener('input', () => {
+  console.log(textBox.value.length)
+
+  count1.textContent = `Characters: ${textBox.value.length}`
+})
+
+
+
+
+
+
+const minusButton=document.querySelector('#minusButton')
+const plusButton=document.querySelector('#plusButton')
+const nrButton=document.querySelector('#number')
+
+
+let count = 0;
+minusButton.addEventListener('click', () =>{
+  if (count<=0){
+    return
+  
+  }
+
+  count = count - 1;
+  nrButton.innerHTML = count;
+})
+
+
+
+plusButton.addEventListener('click', () =>{
+
+  count = count + 1;
+  nrButton.innerHTML = count;
+})
+
+
+
+
+
+
+
+
+
+
+
+
+const textInput = document.querySelector('.input')
+const charCount = document.querySelector('.char-count')
+
+textInput.addEventListener('input', () => {
+  charCount.textContent = textInput.value.length
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
