@@ -1,0 +1,37 @@
+.box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 2px;
+}
+
+.taskInput {
+    padding: 5px;
+    width: 200px;
+}
+
+.output li {
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+#number {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+#myText {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+
+
+
