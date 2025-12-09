@@ -38,6 +38,12 @@ const input = document.querySelector('.inputTask')
 const addBtn = document.querySelector('.add-btn')
 const todoList = document.querySelector('.todo-list')
 
+const createTextFromInput = () => {
+  const value = input.value;
+
+  if(value )
+}
+
 
 addBtn.addEventListener('click', () =>{
   const text = input.value.trim()
